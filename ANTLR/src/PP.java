@@ -426,7 +426,9 @@ class PPProcCall extends PPInst {
     }
 }//PPProcCall
     
-abstract class PPSkip extends PPInst {}//PPSkip
+class PPSkip extends PPInst {
+
+	
 
 class PPSeq extends PPInst {
 
@@ -447,7 +449,7 @@ class PPSeq extends PPInst {
 /* Definitions of functions/procedures */
 /***************************************/
 
-class Pair<L,R> {
+static class Pair<L,R> {
 
     final L left;
     final R right;
@@ -551,4 +553,5 @@ class PPProg {
     	}
     	return new UPPProg(nglobals, ndefs,ncode);
     }
+}
 }//PPProg
