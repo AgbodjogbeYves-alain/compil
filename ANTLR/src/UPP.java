@@ -217,22 +217,6 @@ class UPPGe extends UPPBinOp {
 	}
 }//UPPGe
 
-abstract class Callee {}//Callee
-
-class Read extends Callee {}//Read
-
-class Write extends Callee {}//Write
-
-class User extends Callee {
-
-    String name;
-
-    User (String name) {
-        this.name = name;
-    }//User
-
-}//User
-
 class Alloc extends Callee {}//Alloc
 
 class UPPFunCall extends UPPExpr {
@@ -378,21 +362,6 @@ class UPPSeq extends UPPInst {
 /* Definitions of functions/procedures */
 /***************************************/
 
-class Pair<L,R> {
-
-    final L left;
-    final R right;
-
-    public Pair(L left, R right) {
-        this.left = left;
-        this.right = right;
-    }//Pair
-
-    static <L,R> Pair<L,R> of(L left, R right){
-        return new Pair<L,R>(left, right);
-    }//of
-
-}//Pair
 
 abstract class UPPDef {
 

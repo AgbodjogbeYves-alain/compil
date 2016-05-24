@@ -413,7 +413,7 @@ class PPArrayAlloc extends PPExpr {
         UPPExpr sizeBytes= new UPPMul(new UPPCte(4),nsize);
         ArrayList<UPPExpr> args = new ArrayList<UPPExpr>();
         args.add(sizeBytes);
-        return new UPPFunCall (new Alloc (),args);
+        return new UPPFunCall (new Alloc(),args);
     }//toUPP
     public String toString() {
     return("new array (" + type + ") (" + size + ")");
